@@ -8,10 +8,18 @@ var builder = WebApplication.CreateBuilder(args);
 {
     var services = builder.Services;
     services.AddControllers();
-    builder.Services.AddSingleton<IVirusChecker, DummyVirusChecker>();
+    builder.Services.AddSingleton<IVirusChecker, VirusTotalChecker>();
+    builder.Services.AddSwaggerGen();
 }
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
 
 // configure HTTP request pipeline
 {

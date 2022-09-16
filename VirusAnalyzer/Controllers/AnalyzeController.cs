@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using VirusAnalyzer.Models;
 using VirusAnalyzer.Structures.Interfaces;
 using VirusAnalyzer.Structures.Structs;
 
@@ -17,11 +18,31 @@ public class AnalyzeController : Controller
     }
     
     [HttpGet]
-    public IActionResult GetAll()
+    public async Task<IActionResult> GetVirusThreatLocal([FromQuery]string path)
     {
-        FileData fileData = new FileData();
-        return Ok(_virusChecker.GetFileThreat(fileData).ToString());
+        byte[] byteArray = System.IO.File.ReadAllBytes(path);
+
+        FileData fileData = new FileData()
+        {
+            Data = byteArray,
+            Extension = Path.GetExtension(path),
+        };
+
+        var threatLevel = await _virusChecker.GetFileThreat(fileData);
+        return Ok(threatLevel.ToString());
     }
 
+    [HttpPost]
+    public async Task<IActionResult> GetVirusThreatLocal([FromBody] FileDataInput fileDataInput)
+    {
+        FileData fileData = new FileData()
+        {
+            Extension = fileDataInput.Extension,
+            Data = fileDataInput.Data,
+        };
+
+        var threatLevel = await _virusChecker.GetFileThreat(fileData);
+        return Ok(threatLevel.ToString());
+    }
     
 }

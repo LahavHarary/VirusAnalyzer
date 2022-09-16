@@ -5,8 +5,8 @@ namespace VirusAnalyzer.Core;
 
 public class DummyVirusChecker : IVirusChecker 
 {
-    public E_Threat GetFileThreat(FileData filedata)
+    public  Task<E_Threat> GetFileThreat(FileData filedata)
     {
-        return E_Threat.NoThreat;
+        return Task.FromResult(E_Threat.NoThreat);
     }
 }

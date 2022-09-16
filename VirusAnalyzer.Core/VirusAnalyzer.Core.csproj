@@ -10,4 +10,8 @@
       <ProjectReference Include="..\VirusAnalyzer.Structures\VirusAnalyzer.Structures.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="VirusTotalNet" Version="2.0.1" />
+    </ItemGroup>
+
 </Project>
