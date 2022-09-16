@@ -1,2 +1,2 @@
-# VirusChecker
+# VirusAnalyzer
 A personal project
