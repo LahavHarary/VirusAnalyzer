@@ -1,17 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Models" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\VirusAnalyzer.Core\VirusAnalyzer.Core.csproj" />
       <ProjectReference Include="..\VirusAnalyzer.Structures\VirusAnalyzer.Structures.csproj" />
     </ItemGroup>
 

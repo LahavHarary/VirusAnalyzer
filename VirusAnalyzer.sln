@@ -2,7 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirusAnalyzer", "VirusAnalyzer\VirusAnalyzer.csproj", "{776612BF-31E9-41B2-9372-71C5F46A4EC9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{0A6054B7-E98B-45D6-9103-226716181778}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirusAnalyzer.Core", "VirusAnalyzer.Core\VirusAnalyzer.Core.csproj", "{C4868721-D292-41E7-900A-B56D1185A304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirusAnalyzer.Structures", "VirusAnalyzer.Structures\VirusAnalyzer.Structures.csproj", "{0992BBBD-7288-4835-A380-3E971FAF109E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,5 +16,13 @@ Global
 		{776612BF-31E9-41B2-9372-71C5F46A4EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{776612BF-31E9-41B2-9372-71C5F46A4EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{776612BF-31E9-41B2-9372-71C5F46A4EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4868721-D292-41E7-900A-B56D1185A304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4868721-D292-41E7-900A-B56D1185A304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4868721-D292-41E7-900A-B56D1185A304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4868721-D292-41E7-900A-B56D1185A304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0992BBBD-7288-4835-A380-3E971FAF109E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0992BBBD-7288-4835-A380-3E971FAF109E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0992BBBD-7288-4835-A380-3E971FAF109E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0992BBBD-7288-4835-A380-3E971FAF109E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
